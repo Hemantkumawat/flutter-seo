@@ -1,5 +1,5 @@
 name: flutter_web_app
-description: Discover a wide range of products at Trosnow. Shop online and enjoy quick and convenient delivery. Start shopping now!.
+description: Discover a wide range of products at MyApp. Shop online and enjoy quick and convenient delivery. Start shopping now!.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev

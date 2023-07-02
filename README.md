@@ -1,20 +1,68 @@
-# flutter_web_app
+# Flutter Web App SEO Example
 
-A new Flutter project.
+This is an example Flutter web application that demonstrates proper SEO (Search Engine Optimization) implementation. It includes meta tags, structured data, and hidden content to improve search engine visibility and provide relevant information to web crawlers.
+
+## Features
+
+- Proper meta tags for title, description, and keywords
+- Canonical URL for search engine indexing
+- Structured data using JSON-LD format
+- Hidden content for SEO purposes
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To run the Flutter web application locally, follow these steps:
 
-A few resources to get you started if this is your first Flutter project:
+1. Clone the repository:
+```bash
+$ git clone https://github.com/your-username/your-repo.git
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+2. Install the dependencies:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+$ cd your-repo
+$ flutter pub get
+```
+
+3. Run the application:
+```bash
+$ flutter run -d chrome
+```
+
+## Implementation Details
+
+### SEOWidget
+
+The `SEOWidget` is a Flutter widget that wraps the content of your application and adds SEO-related metadata. It includes the following attributes:
+
+- `pageTitle`: The title of the page (default: 'MyApp - Your One-Stop Shop for Quick Commerce')
+- `pageDescription`: The meta description of the page (default: 'Discover a wide range of products at MyApp. Shop online and enjoy quick and convenient delivery. Start shopping now!')
+- `pageKeywords`: The meta keywords of the page (default: 'quick commerce, online shopping, e-commerce, products, delivery')
+- `pageUrl`: The canonical URL of the page (default: 'MyApp.com')
+- `imageUrl`: The URL of the page's main image (default: 'https://MyApp.com/favicon.png')
+- `child`: The child widget that contains the actual content of the page
+
+Note: The `SEOWidget` is only applied if the app is running on a web platform.
+
+### MyApp
+
+The `MyApp` widget is the root of the Flutter application. It includes the `SEOWidget` and sets up the basic structure of the app.
+
+### Usage
+
+To use the `SEOWidget`, simply wrap your content with it. For example, in the `MyHomePage` widget:
+
+
+```dart
+SEOWidget(
+    pageTitle: 'Welcome to MyApp',
+    pageDescription: 'Discover a wide range of products at MyApp. Shop online and enjoy quick and convenient delivery.',
+    child: Center(
+        // Your content goes here
+    ),
+),
+```
 
 
 
-`flutter run -d chrome --web-renderer html`
